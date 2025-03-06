@@ -1,0 +1,3 @@
+Como alterar tabela de preço do cliente 
+
+adm > comercial > clientes X serviço > pesquisa pelo cliente ai você altera a tabela de acordo com o serviço deseja, exemplo: shopee ai você clica em editar altera no campo serviço e coloca a tabela desejada 

@@ -1,0 +1,72 @@
+.homeComponent{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #003049;
+}
+h1{
+  padding-top: 20px;  
+  font-size: 44px;
+  text-transform: uppercase;
+}
+
+.geladissimo{
+  position: fixed;
+  bottom: 280px;
+  left: 0px;
+  max-width: 1000px;
+  height: 500px;
+
+  transform: rotate(17deg);
+}
+
+.ilha{
+  position: fixed;
+  bottom: 470px;
+  right: 90px;
+  max-width: 650px;
+  height: 350px;
+
+}
+
+p{
+  padding-top: 20px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+@media(min-width: 300px){
+  h1{
+    font-size: 1rem;
+  }
+
+  p{
+    font-size: 0.95rem;
+  }
+}
+
+@media(min-width: 600px){
+  h1{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+}
+
+@media(min-width: 1024px){
+  h1{
+    font-size: 3rem;
+  }
+
+  p{
+    font-size: 1.25rem;
+  }
+}
+
+
+
+

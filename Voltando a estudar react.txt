@@ -1,0 +1,14 @@
+Voltando a estudar react
+
+HTML
+CSS
+JAVASCRIPT
+
+REACT
+
+fundamentos 
+hooks
+uses
+
+
+Fazer sistema pra pedir geladinhos usando react que você que te da a opção de cardápio assim você consegue escolher qual geladinho deseja e já manda uma mensagem pronta via WhatsApp, a parte de backend é armazenar os pedidos e infomações de quem pediu
