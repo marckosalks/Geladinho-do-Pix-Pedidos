@@ -9,8 +9,8 @@ export function SaborLista(){
         <ul>
         {sabores.map((sabor: string, index ) => (
            <li key={index}>
-            <img src={Images[index]} alt="" />
-            {sabor}
+            <img src={Images[index]} alt="" className="geladinhos"/>
+            <a href="">{sabor}</a>
             </li>
         ))}
         </ul>
