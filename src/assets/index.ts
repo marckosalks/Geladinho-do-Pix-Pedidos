@@ -5,7 +5,7 @@ import Maracuja from "../assets/maracuja.jpg"
 
 export const Images = [
   Coco,
-  Manga,
   Morango,
+  Manga,
   Maracuja
 ]

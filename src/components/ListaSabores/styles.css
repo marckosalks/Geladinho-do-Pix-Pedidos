@@ -1,19 +1,19 @@
-.saboresContainer{
+.saboresContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-ul{
+ul {
   display: flex;
-  gap: 1rem;  
+  gap: 1rem;
   list-style-type: none;
   padding-top: 60px;
   justify-content: center;
   align-content: center;
- }
+}
 
- li{
+li {
   display: flex;
   flex-direction: column;
   font-weight: bold;
@@ -23,11 +23,29 @@ ul{
   border-radius: 5px;
   border: 1px solid #151515;
   width: 180px;
+  position: relative;  /* Adicionando position: relative aos itens da lista para manipular o z-index se necessário */
+}
 
- }
-
- .geladinhos{
+.geladinhos {
   border-radius: 5px;
   width: 100%;
   height: 200px;
- }
+  
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  color: #33658a;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  font-size: 1.75rem;
+  background-color: #fff;
+  width: 100%;
+}
+
+a:hover{
+  color: #55dde0;
+}

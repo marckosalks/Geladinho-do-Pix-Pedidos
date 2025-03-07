@@ -3,7 +3,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  color: #003049;
+  color: #33658a;
 }
 h1{
   padding-top: 20px;  
@@ -21,9 +21,9 @@ h1{
   transform: rotate(17deg);
 }
 
-.ilha{
+.meninaGeladinho{
   position: fixed;
-  bottom: 470px;
+  bottom: 450px;
   right: 90px;
   max-width: 650px;
   height: 350px;
