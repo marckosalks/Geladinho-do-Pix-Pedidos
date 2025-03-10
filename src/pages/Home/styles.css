@@ -5,6 +5,10 @@
   align-items: center;
   color: #33658a;
 }
+.container{
+  padding-bottom: 7.5rem;
+}
+
 h1{
   padding-top: 20px;  
   font-size: 44px;

@@ -1,0 +1,15 @@
+.containerBanner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e71d36;
+  border-radius: 20px;
+
+  width: 60%;
+  height: 150px;
+}
+
+h2{
+  color: #f1faee;
+  font-size: 1.75rem;
+}

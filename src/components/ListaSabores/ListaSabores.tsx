@@ -1,7 +1,7 @@
 import { Images } from "../../assets"
 import "./styles.css"
 
-export function SaborLista(){
+export function ListaSabores(){
   const sabores = ["Coco", "Morango", "Manga", "Maracuja"]
 
   return(
