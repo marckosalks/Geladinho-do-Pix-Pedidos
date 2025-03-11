@@ -1,10 +1,13 @@
-import { Home } from "./pages/Home/Home"
+import { BrowserRouter } from "react-router"
+
+import Router from "./Router"
 
 export function App() {
 
   return (
-    <>
-      <Home/>
-    </>
+    <BrowserRouter>
+      <Router/>
+    </BrowserRouter>
+    
   )
 }
