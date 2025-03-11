@@ -1,20 +1,21 @@
-import { useLayoutEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
-import { ListaSabores } from "../../components/ListaSabores/ListaSabores"
-import { BannerPromocao } from "../../components/BannerPromocao/bannerPromocao"
 import Geladissimo from "../../assets/geladissimo.png"
 
+import { ListaSabores } from "../../components/ListaSabores/ListaSabores"
+
 import "./styles.css"
+import { BannerPromocao } from "../../components/BannerPromocao/BannerPromocao"
 
 export function Home() {
   const frases = [
-    "Promção comprando 2 geladinhos, a unidade sai a R$ 2,50!!",
+    "Promoção comprando 2 geladinhos, a unidade sai a R$ 2,50!!",
     "Muito bom ter você aqui, fique a vontade!"
   ]
 
   const [fraseBanner, setFraseBanner] = useState(frases[0])
 
-  useLayoutEffect(()=> {
+  useEffect(()=> {
     let indice = 0;
     
     setInterval(()=>{
