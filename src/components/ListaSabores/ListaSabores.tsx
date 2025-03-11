@@ -1,3 +1,4 @@
+import { Link } from "react-router"
 import { Images } from "../../assets"
 import "./styles.css"
 
@@ -10,7 +11,8 @@ export function ListaSabores(){
         {sabores.map((sabor: string, index ) => (
            <li key={sabor}>
             <img src={Images[index]} alt="" className="geladinhos"/>
-            <a href="" >{sabor}</a>
+            <Link to="/pedidos">{sabor}</Link>
+            
             </li>
         ))}
         </ul>

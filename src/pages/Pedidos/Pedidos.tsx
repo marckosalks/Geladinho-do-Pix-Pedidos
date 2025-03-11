@@ -1,7 +1,7 @@
 export default function Pedidos() {
   return (
     <div>
-      <h3>Escolha seu pedido</h3>
+      <h3>Faça seu pedido aqui!</h3>
     </div>
   )
 }
