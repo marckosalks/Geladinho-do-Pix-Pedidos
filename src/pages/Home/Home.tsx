@@ -28,7 +28,7 @@ export function Home() {
 
     <div className="homeComponent">
       <div className="container">
-        <h1>Bem-vindo ao Geladinho do Pix Pedidos</h1>
+        <h1>Geladinho do Pix</h1>
         <img src={Geladissimo} alt="" className="geladissimo" />
         <p>Aqui voce encontra refresco pro seu calor</p>
         <ListaSabores />
