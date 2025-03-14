@@ -1,22 +1,35 @@
-import { sabores } from "../../components/ListaSabores/ListaSabores"
+import { useState } from "react"
+// import { sabores } from "../../components/ListaSabores/ListaSabores"
 import "./styles.css"
 
-export default function Pedidos() {
 
+type PedidosType ={
+  titulo: string,
+  imagem: string,
+  descricao: string,
+}
+
+export default function Pedidos({titulo, imagem, descricao}: PedidosType) {
+  const [quantidade, setQuantidade ] =  useState(0)
 
   return (
     <div className="containerPedidos">
-      <h3>Faça seu pedido aqui!</h3>
-      <form>
-        {sabores.map((sabor: string) => (
-          <div>
-            <input type="checkbox" />
-            <input type="number" />
-            <span>{sabor}</span>
-          </div>
-        ))}
-        <button type="submit">Enviar</button>
-      </form>
+      <h3>{titulo}</h3>
+      
+      <div className="cardFlavor">
+      <img src={imagem} alt="" />
+      <p>{descricao}</p>
+      </div>
+      
+      <div>
+        <button onClick={()=> setQuantidade(quantidade + 1)}>+</button>
+        <span>{quantidade}</span>
+        <button onClick={()=> setQuantidade(quantidade - 1)}>-</button>
+      </div>
+
+      <div>
+        Adicionar R${quantidade * 2.5}
+      </div>
     </div>
   )
 }
