@@ -1,6 +1,6 @@
 import { Images } from "../assets";
 
-export const pedido = [
+export const itensPedido = [
   {
     id: 1,
     titulo: "Coco",
