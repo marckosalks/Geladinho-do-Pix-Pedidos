@@ -1,4 +1,14 @@
+
 import { Images } from "../assets";
+
+
+export type itensPedidoType = {
+  id: number;
+  titulo?: string;
+  imagem: string;
+  descricao: string
+}
+
 
 export const itensPedido = [
   {

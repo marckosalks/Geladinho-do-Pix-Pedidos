@@ -1,7 +1,7 @@
-import Coco from "../assets/coco.jpg"
-import Manga from "../assets/manga.jpg"
-import Morango from "../assets/morango.jpg"
-import Maracuja from "../assets/maracuja.jpg"
+import Coco from "../assets/coco.svg"
+import Manga from "../assets/manga.svg"
+import Morango from "../assets/morango.svg"
+import Maracuja from "../assets/maracuja.svg"
 import Goiaba from "../assets/goiaba.svg"
 import Pacoca from "../assets/pacoca.svg"
 

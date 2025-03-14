@@ -1,9 +1,13 @@
 import {createContext, ReactNode, useContext, useState} from "react"
 
+import { itensPedido, itensPedidoType } from "../mocks/itensPedidos";
+
 type SaborContextType = {
   sabor: string;
-  setSabor: (sabor: string) => void
+  setSabor: (sabor: string) => void;
+  itensPedido: itensPedidoType[];
 }
+
 
 const SaborContext = createContext<SaborContextType | undefined>(undefined)
 
@@ -19,7 +23,7 @@ export function useSabor() {
 export function SaborProvider({children}: {children: ReactNode}){
   const [sabor, setSabor] = useState("");
   return(
-    <SaborContext.Provider value={{sabor, setSabor}}>
+    <SaborContext.Provider value={{sabor, setSabor, itensPedido}}>
       {children}
     </SaborContext.Provider>
   )

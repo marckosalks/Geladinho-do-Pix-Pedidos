@@ -1,10 +1,13 @@
 import { useState } from "react"
-import "./styles.css"
-import { useSabor } from "../../context/saborContext";
+import {  useSabor } from "../../context/saborContext";
 // import { Images } from "../../assets"
+
+
+import "./styles.css"
 
 export default function Pedidos() {
     const [quantidade, setQuantidade ] =  useState(0);
+    const {itensPedido} = useSabor()
     const { sabor } = useSabor()
 
   console.log(sabor)
@@ -16,9 +19,9 @@ export default function Pedidos() {
     <div className="containerPedidos">
       <h3>{sabor}</h3>
       
-      <div className="cardFlavor">
-      {/* <img src={} alt="" /> */}
-      <p>{}</p>
+      <div className="cardSabor">
+      <img src={itensPedido[0].imagem} alt="" />
+      <p>{itensPedido[0].descricao}</p>
       </div>
       
       <div>
