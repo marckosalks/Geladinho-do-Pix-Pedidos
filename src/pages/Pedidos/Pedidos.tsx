@@ -14,7 +14,7 @@ export default function Pedidos() {
     // for igual determinado sabor, exibir as informações de acordo com esse sabor
 
     <div className="containerPedidos">
-      <h3>{}</h3>
+      <h3>{sabor}</h3>
       
       <div className="cardFlavor">
       {/* <img src={} alt="" /> */}
