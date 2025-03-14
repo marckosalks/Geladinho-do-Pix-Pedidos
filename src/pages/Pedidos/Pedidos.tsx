@@ -1,7 +1,7 @@
 import { useState } from "react"
 // import { sabores } from "../../components/ListaSabores/ListaSabores"
 import "./styles.css"
-
+// import { Images } from "../../assets"
 
 type PedidosType ={
   titulo: string,
@@ -9,10 +9,16 @@ type PedidosType ={
   descricao: string,
 }
 
+
+
+
 export default function Pedidos({titulo, imagem, descricao}: PedidosType) {
   const [quantidade, setQuantidade ] =  useState(0)
 
   return (
+
+    // basicamente aqui vai conter uma logica pra se o sabor retornado 
+    // for igual determinado sabor, exibir as informações de acordo com esse sabor
     <div className="containerPedidos">
       <h3>{titulo}</h3>
       
