@@ -1,7 +1,5 @@
 import { useState } from "react"
 import {  useSabor } from "../../context/saborContext";
-// import { Images } from "../../assets"
-
 
 import "./styles.css"
 
@@ -9,19 +7,24 @@ export default function Pedidos() {
     const [quantidade, setQuantidade ] =  useState(0);
     const {itensPedido} = useSabor()
     const { sabor } = useSabor()
+    console.log(itensPedido)
 
-  console.log(sabor)
+    const novoArray = itensPedido.filter(item => sabor === item.titulo)
+    
+    const pedido = {
+      titulo: novoArray[0].titulo,
+      descricao: novoArray[0].descricao,
+      imagem: novoArray[0].imagem
+    }
+
   return (
 
-    // basicamente aqui vai conter uma logica pra se o sabor retornado 
-    // for igual determinado sabor, exibir as informações de acordo com esse sabor
-
     <div className="containerPedidos">
-      <h3>{sabor}</h3>
+      <h3>{pedido.titulo}</h3>
       
       <div className="cardSabor">
-      <img src={itensPedido[0].imagem} alt="" />
-      <p>{itensPedido[0].descricao}</p>
+      <img src={pedido.imagem} alt="" />
+      <p>{pedido.descricao}</p>
       </div>
       
       <div>
