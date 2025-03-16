@@ -1,13 +1,13 @@
 import { useState } from "react"
 import { useSabor } from "../../context/saborContext";
-
-import "./styles.css"
 import { useNavigate } from "react-router";
 
+import "./styles.css"
+
 export default function Pedidos() {
-  const [quantidade, setQuantidade] = useState(0);
+  const [quantidadeCount, setQuantidadeCount] = useState(0);
+  const { sabor, setPreco, setQuantidade } = useSabor()
   const { itensPedido } = useSabor()
-  const { sabor } = useSabor()
   const navigate = useNavigate()
 
   const novoArray = itensPedido.filter(item => sabor === item.titulo)
@@ -19,14 +19,13 @@ export default function Pedidos() {
   }
 
   function handlePedido (){
-    if(quantidade == 0){
+    if(quantidadeCount == 0){
       return
     }else{
-      const objPedido = {
-        sabor: pedido.titulo,
-        qtd: quantidade * 2.5,
-      }
-      console.log(objPedido)
+
+      setPreco(quantidadeCount * 2.5)
+      
+      setQuantidade(quantidadeCount)
 
       navigate("/confirmar")
     }
@@ -45,17 +44,17 @@ export default function Pedidos() {
 
       <div className="containerFooter">
         <div className="containerQtd">
-          {quantidade === 0 ? <button disabled onClick={() => setQuantidade(quantidade - 1)}></button>
-            : <button onClick={() => setQuantidade(quantidade - 1)}>-</button>}
+          {quantidadeCount === 0 ? <button disabled></button>
+            : <button onClick={() => setQuantidadeCount(quantidadeCount - 1)}>-</button>}
 
-          {quantidade === 0 && !quantidade ? <span></span> : <span>{quantidade}</span>}
+          {quantidadeCount === 0 && !quantidadeCount ? <span></span> : <span>{quantidadeCount}</span>}
           
-          <button onClick={() => setQuantidade(quantidade + 1)}>+</button>
+          <button onClick={() => setQuantidadeCount(quantidadeCount + 1)}>+</button>
         </div>
 
         <div className="containerValor">
           <button onClick={handlePedido}>Adicionar</button>
-          <span>R${quantidade * 2.5}</span>
+          <span>R${quantidadeCount * 2.5}</span>
         </div>
       </div>
     </div>

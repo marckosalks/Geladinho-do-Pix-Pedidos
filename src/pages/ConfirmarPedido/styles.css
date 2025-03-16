@@ -1,0 +1,46 @@
+.cardConfirmacao{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #33658a;
+}
+
+.totalPedido{
+  display: flex;
+  justify-content: center;
+}
+
+.totalPedido span{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #537a5a;
+}
+
+
+.caixaQrCode{
+  display: flex;
+  width: 100%;
+}
+.qrCode{
+  width: 360px;
+  height: 320px;
+}
+
+.btnConfirmar{
+  padding: 20px;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color:aliceblue;
+  text-transform: uppercase;
+  background-color: #208b3a;
+  border-radius: 10px;
+}
+
+.btnConfirmar:hover{
+  background: #054a29;
+  transition: 0.5s;
+  cursor: pointer;
+}

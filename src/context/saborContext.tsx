@@ -4,7 +4,11 @@ import { itensPedido, itensPedidoType } from "../mocks/itensPedidos";
 
 type SaborContextType = {
   sabor: string;
+  preco: number;
+  quantidade: number
   setSabor: (sabor: string) => void;
+  setPreco: (preco: number) => void;
+  setQuantidade: (quantidade: number) => void;
   itensPedido: itensPedidoType[];
 }
 
@@ -22,8 +26,10 @@ export function useSabor() {
 
 export function SaborProvider({children}: {children: ReactNode}){
   const [sabor, setSabor] = useState("");
+  const [preco, setPreco] = useState(0);
+  const [quantidade, setQuantidade] = useState(0);
   return(
-    <SaborContext.Provider value={{sabor, setSabor, itensPedido}}>
+    <SaborContext.Provider value={{sabor, preco, quantidade,  setSabor,  itensPedido, setPreco, setQuantidade}}>
       {children}
     </SaborContext.Provider>
   )
