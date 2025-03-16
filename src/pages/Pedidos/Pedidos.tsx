@@ -2,7 +2,6 @@ import { useState } from "react"
 import { useSabor } from "../../context/saborContext";
 
 import "./styles.css"
-import { Navigate } from "react-router";
 
 export default function Pedidos() {
   const [quantidade, setQuantidade] = useState(0);
