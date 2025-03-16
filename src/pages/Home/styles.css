@@ -19,11 +19,11 @@
 .geladissimo{
   position: fixed;
   bottom: 280px;
-  left: 0px;
+  left: -30px;
   max-width: 1000px;
   height: 500px;
 
-  transform: rotate(17deg);
+  transform: rotate(12deg);
 }
 
 .meninaGeladinho{
