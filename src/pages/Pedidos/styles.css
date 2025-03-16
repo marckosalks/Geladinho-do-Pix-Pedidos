@@ -4,12 +4,64 @@
   justify-content: center;
   width: 100%;
   flex-direction: column;
+  gap: 5rem;
 }
 
 h3{
   padding: 2rem;
-  font-size: 3rem;
+  font-size: 4rem;
   text-transform: uppercase;
   color: #33658a;
+}
+
+.cardSabor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.pedidoImagem{
+  width:80%;
+  border-radius: 80px;
+}
+
+.textoSpbreposto{
+  position: absolute;
+  width: 70%;
+  font-size: 2rem;
+  font-weight: 500;
+  color: aliceblue;
+}
+
+.containerFooter{
+  display: flex;
+  width: 100%;
+  justify-content:space-between;
+}
+
+.containerQtd{
+  display: flex;
+  width: 23%;
+  justify-content: center;
+}
+
+.containerQtd button{
+  border: none;
+  background: none;
+  padding: 5px;
+  color: #e30013;
+  font-size: 1.5rem;
+}
+
+.containerQtd span{
+  font-size: 1.65rem;
+}
+
+.containerValor{
+  display: flex;
+  width: 27%;
+  justify-content: center;
 }
 
