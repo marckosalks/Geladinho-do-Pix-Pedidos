@@ -2,11 +2,13 @@ import { useState } from "react"
 import { useSabor } from "../../context/saborContext";
 
 import "./styles.css"
+import { useNavigate } from "react-router";
 
 export default function Pedidos() {
   const [quantidade, setQuantidade] = useState(0);
   const { itensPedido } = useSabor()
   const { sabor } = useSabor()
+  const navigate = useNavigate()
 
   const novoArray = itensPedido.filter(item => sabor === item.titulo)
 
@@ -26,6 +28,7 @@ export default function Pedidos() {
       }
       console.log(objPedido)
 
+      navigate("/confirmar")
     }
     
   }
