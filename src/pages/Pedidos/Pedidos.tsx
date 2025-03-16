@@ -2,12 +2,12 @@ import { useState } from "react"
 import { useSabor } from "../../context/saborContext";
 
 import "./styles.css"
+import { Navigate } from "react-router";
 
 export default function Pedidos() {
   const [quantidade, setQuantidade] = useState(0);
   const { itensPedido } = useSabor()
   const { sabor } = useSabor()
-  console.log(itensPedido)
 
   const novoArray = itensPedido.filter(item => sabor === item.titulo)
 
@@ -15,6 +15,20 @@ export default function Pedidos() {
     titulo: novoArray[0].titulo,
     descricao: novoArray[0].descricao,
     imagem: novoArray[0].imagem
+  }
+
+  function handlePedido (){
+    if(quantidade == 0){
+      return
+    }else{
+      const objPedido = {
+        sabor: pedido.titulo,
+        qtd: quantidade * 2.5,
+      }
+      console.log(objPedido)
+
+    }
+    
   }
 
   return (
@@ -38,7 +52,7 @@ export default function Pedidos() {
         </div>
 
         <div className="containerValor">
-          <button>Adicionar</button>
+          <button onClick={handlePedido}>Adicionar</button>
           <span>R${quantidade * 2.5}</span>
         </div>
       </div>

@@ -53,6 +53,7 @@ h3{
   padding: 5px;
   color: #e30013;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .containerQtd span{
@@ -61,7 +62,21 @@ h3{
 
 .containerValor{
   display: flex;
-  width: 27%;
+  width: 32%;
   justify-content: center;
 }
 
+.containerValor button{
+  border: none;
+  background: none;
+  padding: 5px;
+  padding-right: 20px;
+  font-size: 1.5rem;
+  color: #33658a;
+  cursor: pointer;
+}
+
+.containerValor span{
+  font-size: 1.65rem;
+  color: #33658a;
+}
