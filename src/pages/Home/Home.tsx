@@ -5,7 +5,8 @@ import Geladissimo from "../../assets/geladissimo.png"
 import { ListaSabores } from "../../components/ListaSabores/ListaSabores"
 
 import "./styles.css"
-import { BannerPromocao } from "../../components/BannerPromocao/BannerPromocao"
+import { BannerPromocao } from "../../components/bannerPromocao/bannerPromocao"
+
 
 export function Home() {
   const frases = [
