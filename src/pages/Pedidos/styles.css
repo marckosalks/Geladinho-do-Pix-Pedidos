@@ -80,3 +80,122 @@ h3{
   font-size: 1.65rem;
   color: #33658a;
 }
+
+
+@media screen and (max-width: 480px){
+  h3{
+    padding: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #33658a;
+  }
+
+
+  p.textoSpbreposto{
+    position: absolute;
+    width: 70%;
+    font-size: 10px;
+    font-weight: 500;
+    color: aliceblue;
+  }
+
+  .pedidoImagem{
+    width:80%;
+    height: 150px;
+    border-radius: 50px;
+  }
+
+  .containerQtd button{
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .containerQtd span{
+    font-size: 1.65rem;
+  }
+  
+  div.containerValor{
+    display: flex;
+    width: 54%;
+    justify-content: center;
+  }
+  
+  .containerValor button{
+    border: none;
+    background: none;
+    padding: 5px;
+    padding-right: 20px;
+    font-size: 1rem;
+    color: #33658a;
+    cursor: pointer;
+  }
+  
+  .containerValor span{
+    font-size: 1.65rem;
+    color: #33658a;
+  }
+}
+
+@media screen and  (max-width: 600px){
+  .textoSpbreposto{
+    position: absolute;
+    width: 70%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: aliceblue;
+  }
+}
+
+@media screen  and (max-width: 1440px){
+  h3{
+    padding: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #33658a;
+  }
+  
+  
+  .textoSpbreposto{
+    position: absolute;
+    width: 70%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: aliceblue;
+  }
+  .containerQtd{
+    display: flex;
+    width: 28%;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .containerQtd button{
+    
+    font-size: 1.5rem;
+
+  }
+  
+  .containerQtd span{
+    font-size: 1.25rem;
+  }
+  
+  .containerValor{
+    display: flex;
+    width: 32%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .containerValor button{
+    font-size: 1rem;
+    padding: 0px;
+    padding-right: 5px;
+  }
+  
+  .containerValor span{
+    font-size: 1rem;
+  }
+
+}
+
+
