@@ -1,37 +1,71 @@
-import { useSabor } from "../../context/saborContext"
-import DoPix from "../../assets/doPix.jpeg"
-import "./styles.css"
+import { useSabor } from "../../context/saborContext"; 
+import { useNavigate } from "react-router";
+
+import DoPix from "../../assets/doPix.jpeg";
+import "./styles.css";
+
 
 export function ConfirmarPedido() {
-  const{ sabor, preco, quantidade } = useSabor() 
-  const telefone = 5511984410717
-  
-  function handleConfirmarPedido(){
-    console.log("Essa função te leva pro meu zap zap ")
-    
-    const mensagem = `Olá Marcos, desejo fazer esse pedido abaixo:\n
-    🍦 Sabor: ${sabor}
-    🔢 Quantidade: ${quantidade}
-    💵 Preço: ${preco.toFixed(2)} `
-    
-    const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`;
+  const { pedidos } = useSabor(); 
+  const navigate = useNavigate();
+  const telefone = 5511984410717;
 
-    window.open(url,"_blank" )
+  // 🔹 Cálculo do total de todos os pedidos
+  const totalPedidos = pedidos.reduce((total, pedido) => total + pedido.preco, 0);
+
+  function handleConfirmarPedido() {
+    const saudacao = "Olá, desejo fazer essa encomenda:\n";
+
+    const mensagemPedidos = pedidos
+      .map(
+        (pedido, index) =>
+          `\nPedido ${index + 1}:\n🍦 Sabor: ${pedido.sabor}\n🔢 Quantidade: ${pedido.quantidade}\n💵 Preço: R$${pedido.preco.toFixed(2)}\n`
+      )
+      .join("\n");
+
+    const mensagemFinal = `${saudacao}${mensagemPedidos}\n🔹 *Total: R$${totalPedidos.toFixed(2)}*`;
+
+    const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagemFinal)}`;
+    window.open(url, "_blank");
+  }
+
+  function handleNovoPedido() {
+    navigate("/"); 
   }
 
   return (
     <div className="cardConfirmacao">
       <h3>Confirmar seu Pedido</h3>
 
-      <div className="containerPedidoRealizado">
-        <div className="totalPedido">
-            <span>🍦Sabores: {sabor}<br/>🔢 Quantidade: {quantidade} <br/> 💵 Preço: R${preco.toFixed(1)}</span>
-        </div>
-        <div className="caixaQrCode">
-          <img className="qrCode" src={DoPix} alt="pix" />
-        </div>
+      {pedidos.length === 0 ? (
+        <p>Nenhum pedido realizado.</p>
+      ) : (
+        pedidos.map((pedido, index) => (
+          <div key={index} className="containerPedidoRealizado">
+            <div className="totalPedido">
+              <span>
+                🍦 Sabor: {pedido.sabor}
+                <br />🔢 Quantidade: {pedido.quantidade}
+                <br /> 💵 Preço: R${pedido.preco.toFixed(2)}
+              </span>
+            </div>
+          </div>
+        ))
+      )}
+
+      <div className="caixaQrCode">
+        <img className="qrCode" src={DoPix} alt="pix" />
       </div>
-      <button className="btnConfirmar" onClick={handleConfirmarPedido}>Confirmar pedido</button>
+
+      <span>Total: R$ {totalPedidos.toFixed(2)}</span>
+
+      <button className="btnConfirmar" onClick={handleConfirmarPedido}>
+        Confirmar pedido
+      </button>
+       ou 
+      <button className="btnNovoPedido" onClick={handleNovoPedido}>
+        Fazer novo pedido
+      </button>
     </div>
-  )
+  );
 }
