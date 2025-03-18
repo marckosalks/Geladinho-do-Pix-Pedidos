@@ -51,12 +51,12 @@ export const itensPedido = [
     id: 7,
     titulo: "Chocolate",
     imagem: Images[6],
-    descricao: "O Clássico Cremoso! Sabor leve, textura irresistível e aquele gostinho de coco que abraça o paladar. Refrescante e delicioso a cada mordida!",
+    descricao: "O Intenso e Cremoso! Sabor marcante, textura aveludada e aquele irresistível gostinho de chocolate que conquista a cada pedaço. Puro prazer em cada mordida!",
   },
   {
     id: 8,
     titulo: "Uva",
     imagem: Images[7],
-    descricao: "O Clássico Cremoso! Sabor leve, textura irresistível e aquele gostinho de coco que abraça o paladar. Refrescante e delicioso a cada mordida!",
+    descricao: "O Tradicional Saboroso! Um toque suave, textura envolvente e o inconfundível gostinho de uva que encanta o paladar. Refrescante e irresistível a cada mordida!",
   },
 ];
