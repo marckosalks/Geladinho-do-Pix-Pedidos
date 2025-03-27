@@ -26,6 +26,7 @@ li {
   border: 1px solid #151515;
   width: 180px;
   padding: 10px;
+  transition: all 0.3s ease;
 }
 
 a {
@@ -37,8 +38,15 @@ a {
   outline: none;
   font-size: 1.75rem;
   width: 100%;
+  transition: all 0.3s ease;
 }
 
-a:hover{
-  color: #55dde0;
+li:hover {
+  background-color: var(--cor-sabor);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+  color: white;
 }

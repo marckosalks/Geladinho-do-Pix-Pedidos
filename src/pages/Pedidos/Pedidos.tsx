@@ -23,26 +23,19 @@ export default function Pedidos() {
   };
 
   function handlePedido() {
-    if (quantidadeCount === 0) {
-      setQuantidadeCount((prev) => {
-        const novaQtd = prev + 1;
-        setQuantidade(novaQtd);
-        setPreco(novaQtd * valorUnidade);
-        return novaQtd;
-      });
-    } else {
-      setPreco(quantidadeCount * doisPontoCinco);
-      setQuantidade(quantidadeCount);
-    }
+    const novaQuantidade = quantidadeCount === 0 ? 1 : quantidadeCount;
+    const novoPreco = quantidadeCount === 0 ? valorUnidade : quantidadeCount * doisPontoCinco;
+    
+    setQuantidade(novaQuantidade);
+    setPreco(novoPreco);
 
-    // 🔹 Agora adicionamos o pedido na lista de pedidos
     adicionarPedido({
       sabor,
-      preco: quantidadeCount === 0 ? valorUnidade : quantidadeCount * doisPontoCinco,
-      quantidade: quantidadeCount === 0 ? 1 : quantidadeCount,
+      preco: novoPreco,
+      quantidade: novaQuantidade,
     });
 
-    navigate("/confirmar"); // 🔹 Depois de adicionar, navegamos para confirmar
+    navigate("/confirmar");
   }
 
   function handleAddQtd() {
